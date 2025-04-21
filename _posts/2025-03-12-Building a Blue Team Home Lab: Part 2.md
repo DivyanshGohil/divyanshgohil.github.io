@@ -1,4 +1,4 @@
-## 🌐 Building a Blue Team Home Lab: Part 2 – Network Topology
+## 🌐 Building a Blue Team Home Lab: Part 2 - Network Topology
 
 Welcome to Part 2 of my Blue Team Home Lab series! In this post, we’ll dive into the **network topology** and **VLAN design** that power a secure, flexible, and scalable cyber defense lab.
 
@@ -91,7 +91,7 @@ If you're using **VMware Workstation Pro**:
 
 The resulting topology looks something like this (drawn using [draw.io](https://draw.io)):
 
-![](../_includes/net.drawio.png)
+![](https://github.com/DivyanshGohil/divyanshgohil.github.io/blob/main/_includes/net.drawio.png)
 > A segmented, multi-VLAN lab that mimics a real-world corporate network with external threats, internal systems, and blue team defenses.
 
 🎯 Complex? Maybe. But it’s worth it for realism and learning.
