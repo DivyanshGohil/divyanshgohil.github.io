@@ -1,13 +1,9 @@
-## 📘 Building Blue Team Home Lab - Part 3: Deploying a Firewall  
-**🗓️ Posted:** Apr 12, 2022  
-**🔄 Updated:** Apr 5, 2023  
-**✍️ By:** Marko Andrejic  
-**⏱️ Read Time:** 7 min  
-**🔗 [Reference](https://markoandrejic.com/posts/building-blue-team-home-lab-3/)**  
+## 📘 Building Blue Team Home Lab: Part 3 - Deploying a Firewall  
+
 
 ---
 
-### 🔧 Updates  
+### 🔧 Changes to be Done in Previous Setup  
 1 - Corrected Outbound rules; interface for source `10.0.20.0/24` should be `CORPORATE_LAN_VLAN20`.  
 2 - Disabled DHCP service; domain controller now provides DHCP.  
 3 - Added VLAN 99 for malware analysis.
@@ -106,7 +102,7 @@ Then, in `System > Advanced > Admin Access`:
 - ✅ Allow to Management (`10.0.1.0/24`)  
 - ⛔ Deny to WAN and Security by default  
 - ⛔ Block traffic to Isolation VLAN
-
+https://github.com/DivyanshGohil/divyanshgohil.github.io/blob/main/_includes/net.drawio.png
 ### 🛡️ SECURITY (`10.0.50.254/24`)  
 - ✅ Allow to Corporate LAN (`10.0.20.0/24`)  
 - ✅ Allow to Isolation VLAN (`10.0.99.0/24`)  
@@ -138,3 +134,5 @@ Set NAT rules at `Firewall > NAT > Outbound`:
 ## 📌 Summary  
 
 We've deployed a pfSense firewall, created VLAN rules, assigned IPs, and set up access. With traffic control in place, we're ready to move on to **building our security environment** in the next part. Stay tuned! 🚀
+---
+**🔗 [Reference](https://markoandrejic.com/posts/building-blue-team-home-lab-3/)**  
