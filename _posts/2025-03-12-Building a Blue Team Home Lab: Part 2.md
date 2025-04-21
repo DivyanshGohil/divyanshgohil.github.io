@@ -91,7 +91,7 @@ If you're using **VMware Workstation Pro**:
 
 The resulting topology looks something like this (drawn using [draw.io](https://draw.io)):
 
-![](https://github.com/DivyanshGohil/divyanshgohil.github.io/blob/main/_includes/net.drawio.png)
+![network topology](https://github.com/DivyanshGohil/divyanshgohil.github.io/blob/main/_includes/net.drawio.png)
 > A segmented, multi-VLAN lab that mimics a real-world corporate network with external threats, internal systems, and blue team defenses.
 
 🎯 Complex? Maybe. But it’s worth it for realism and learning.
