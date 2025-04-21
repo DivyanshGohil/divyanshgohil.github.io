@@ -102,7 +102,7 @@ Then, in `System > Advanced > Admin Access`:
 - ✅ Allow to Management (`10.0.1.0/24`)  
 - ⛔ Deny to WAN and Security by default  
 - ⛔ Block traffic to Isolation VLAN
-https://github.com/DivyanshGohil/divyanshgohil.github.io/blob/main/_includes/net.drawio.png
+  
 ### 🛡️ SECURITY (`10.0.50.254/24`)  
 - ✅ Allow to Corporate LAN (`10.0.20.0/24`)  
 - ✅ Allow to Isolation VLAN (`10.0.99.0/24`)  
