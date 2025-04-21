@@ -1,5 +1,3 @@
-## 🔐 About Me
-
 Hi there! I'm a cybersecurity professional with experience in:
 
 - 🛠️ **Penetration Testing**
