@@ -134,5 +134,6 @@ Set NAT rules at `Firewall > NAT > Outbound`:
 ## 📌 Summary  
 
 We've deployed a pfSense firewall, created VLAN rules, assigned IPs, and set up access. With traffic control in place, we're ready to move on to **building our security environment** in the next part. Stay tuned! 🚀
+
 ---
 **🔗 [Reference](https://markoandrejic.com/posts/building-blue-team-home-lab-3/)**  
