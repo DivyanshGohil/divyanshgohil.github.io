@@ -1,4 +1,4 @@
-## 🛡️ Building a Blue Team Home Lab: Part 1 - Introduction
+## 🛡️ Building a Blue Team Home Lab - Part 1 : Introduction
 
 Welcome to the first part of my Blue Team Home Lab series! This guide is for anyone who wants to build a hands-on virtual cybersecurity lab—without spending a fortune.
 
