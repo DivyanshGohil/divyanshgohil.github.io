@@ -1,4 +1,4 @@
-## 🌐 Building a Blue Team Home Lab: Part 2 - Network Topology
+## 🌐 Building a Blue Team Home Lab - Part 2 : Network Topology
 
 Welcome to Part 2 of my Blue Team Home Lab series! In this post, we’ll dive into the **network topology** and **VLAN design** that power a secure, flexible, and scalable cyber defense lab.
 
