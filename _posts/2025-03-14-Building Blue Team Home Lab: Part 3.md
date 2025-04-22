@@ -1,4 +1,4 @@
-## 📘 Building Blue Team Home Lab: Part 3 - Deploying a Firewall  
+## 📘 Building Blue Team Home Lab - Part 3 : Deploying a Firewall  
 
 
 ---
