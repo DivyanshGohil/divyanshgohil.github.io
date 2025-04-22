@@ -1,4 +1,4 @@
-# 🧪 Building Blue Team Home Lab – Part 5: Malware Analysis
+# 🧪 Building Blue Team Home Lab - Part 5: Malware Analysis
 
 
 ## 🛠️ Introduction
