@@ -77,7 +77,6 @@ Set-ExecutionPolicy Unrestricted
 sudo apt update && sudo apt upgrade -y
 ```
 3. Configure static IP in VLAN 99. Edit the netplan configuration file (e.g., `/etc/netplan/01-netcfg.yaml`):
-
 ```yaml
 network:
   version: 2
@@ -91,7 +90,9 @@ network:
           addresses: [10.0.99.254]
           search: [cyber.hub]
 ```
+
 4. Save the file and execute the command ```sudo netplan apply``` to apply network changes. Then verify changes.
+
 
 ---
 
