@@ -85,7 +85,7 @@ This section covers **hostname configuration**, **network settings**, **tool ins
 
 ---
 
-## 🔐 Firewall DNS Resolver Host Override
+## 🔐 Firewall DNS Resolver Host Override (pfsense VM)
 
 > Navigate to: Services > DNS Resolver > General Settings
 ### ➕ Under **Host Overrides**, click **Add** and enter:
