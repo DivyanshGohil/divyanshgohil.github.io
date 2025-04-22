@@ -124,7 +124,9 @@ Now let’s add new bookmarks to my still favorite browser, **Firefox**:
 - [Yandex](https://www.yandex.com/)
 - [Wayback Machine](https://web.archive.org/)
 - [Fake Mail Generator](https://www.fakemailgenerator.com/)
+
 ---
+
 ## ✅ Summary
 
 You now have a fully configured **DFIR Virtual Machine** ready for:
@@ -135,10 +137,13 @@ You now have a fully configured **DFIR Virtual Machine** ready for:
 - 🧪 **General Forensics**
 
 ---
+
 ## 📝 Reference  
   *Published by Marko Andrejic*  
   - [https://facyber.me/posts/blue-team-lab-guide-part-4/](https://facyber.me/posts/blue-team-lab-guide-part-4/)
+
 ---
+
 > ⚠️ **Disclaimer:**  
 > This guide is intended for setting up a lab environment only.  
 > It does **not** teach how to perform DFIR investigations or malware analysis.  
