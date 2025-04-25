@@ -1,4 +1,4 @@
-# 🦝 Building a Blue Team Home Lab – Part 9 : Bandito
+# 🛡️ Building a Blue Team Home Lab – Part 9 : Bandito
 
 
 ---
