@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "About Us"
+title: ""
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-#  About Bytes&Defense
 
 **Bytes&Defense** is a cybersecurity and technology consulting platform dedicated to helping individuals, teams, and businesses secure their digital ecosystems. Whether you're running a startup, managing enterprise infrastructure, or developing your next big app, **we're here to make sure security is never an afterthought**.
 
@@ -77,5 +77,4 @@ Need help launching a secure app or defending against threats?
 Want to build something great - even outside cybersecurity?
 
 **Get in touch**, and let's create something secure, smart, and impactful.
-
-📧 [divyansh.gohil@gmail.com]  
+  

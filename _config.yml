@@ -22,7 +22,7 @@ repository               : "divyanshgohil/divyanshgohil.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/profile.png"
+  avatar           : "profile.png"
   name             : "Gohil Divyansh"
   pronouns         : # example: "she/her"  
   bio              : "My digital notebook for security research, tools, and technical growth."
