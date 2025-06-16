@@ -34,11 +34,11 @@ A **sandboxed network** is critical. Use an isolated VLAN (e.g., `VLAN 99`) wher
 
 ### Windows Malware Analysis VM
 
-#### Tools:
+### Tools:
 - **Microsoft Edge on Windows 10** VM
 - **[Flare VM](https://github.com/mandiant/flare-vm)** – Windows security distribution with analysis tools
 
-#### Setup Instructions:
+### Setup Instructions:
 1. Import Windows 10 VM
 2. Expand disk to **80GB**, configure network as **NAT**
 3. Activate Windows license (valid for 90 days)
@@ -48,7 +48,7 @@ A **sandboxed network** is critical. Use an isolated VLAN (e.g., `VLAN 99`) wher
    - Windows Updates
 5. Create a snapshot (“Vanilla”)
 
-#### Install Flare VM:
+### Install Flare VM:
 1. Run below powershell command as Administrator. You will be prompt with the question to confirm the changes. Press the Y button and then press Enter.
 ```powershell
 Set-ExecutionPolicy Unrestricted
@@ -57,7 +57,7 @@ Set-ExecutionPolicy Unrestricted
 2. Provide password for IEUser.
 3. Installation may take a few hours.
 
-#### Post-Installation:
+### Post-Installation:
 1. Change network to VLAN 99, assign static IP.
    
 | Parameter   | Value           |
@@ -72,10 +72,10 @@ Set-ExecutionPolicy Unrestricted
 
 ### Linux Malware Analysis VM (REMnux)
 
-#### Tools:
+### Tools:
 - **REMnux** – Linux distro for reverse-engineering and malware analysis
 
-#### Setup Instructions:
+### Setup Instructions:
 1. Download REMnux VM and import into your virtualization software.
 
 2. Set network to **NAT**, then update the system:

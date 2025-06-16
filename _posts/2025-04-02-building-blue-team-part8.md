@@ -9,7 +9,7 @@ tags:
 
 
 ###  Introduction
-Hello everyone! I know it’s been a while—life got a bit hectic, and I needed a break from the lab and the website. But I’m back, and it’s time to move forward with something exciting: setting up a **vulnerable web server**.
+Hello everyone! I know it’s been a while, life got a bit hectic, and I needed a break from the lab and the website. But I’m back, and it’s time to move forward with something exciting: setting up a **vulnerable web server**.
 
 We’ll deploy **Ubuntu Server 22.04 LTS** and install **DVWA (Damn Vulnerable Web Application)**. This setup will be super useful for simulating web attacks, analyzing logs, and practicing Blue Team detection techniques.
 
@@ -55,7 +55,7 @@ network:
 ```
 > Use ip a to confirm your interface name (mine is ens33).
 Apply the changes:
-```
+```bash
   netplan apply
 
 ```
@@ -86,28 +86,28 @@ ss -tnlp
 
 ### Fix Permissions & PHP Settings
 
-```
+```bash
 chmod 777 /var/www/html/DVWA/hackable/uploads/
 chmod 777 /var/www/html/DVWA/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt
 chmod 777 /var/www/html/DVWA/config
 ```
 Edit your PHP config and make sure:
 
-```
+```bash
 allow_url_fopen = On
 allow_url_include = On
 ```
 
 ### Apache & DNS Setup
 Configure Virtual Host
-```
+```bash
 cd /etc/apache2/sites-available
 cp 000-default.conf system.cyber.hub.conf
 nano system.cyber.hub.conf
 ```
 Paste:
 
-```
+```bash
 <VirtualHost *:80>
         ServerName system.cyber.hub
 
@@ -119,7 +119,7 @@ Paste:
 </VirtualHost>
 ```
 Enable it:
-```
+```bash
 a2ensite system.cyber.hub.conf
 a2dissite 000-default.conf
 systemctl restart apache2
@@ -127,11 +127,11 @@ systemctl restart apache2
 
 Edit Local DNS
 Edit /etc/hosts on the Linux server:
-```
+```bash
 127.0.0.1 localhost system.cyber.hub
 ```
 Edit /etc/hosts on your host machine:
-```
+```bash
 10.0.1.50 firewall.cyber.hub
 10.0.20.10 system.cyber.hub
 ```
@@ -145,13 +145,11 @@ Try accessing the web app from your Windows 7 VM to confirm everything is workin
 💾 Don’t forget to take snapshots of both your Linux web server and Active Directory VMs.
 
 ### Summary
-And there you have it—a fully working web server running DVWA, tied into our Blue Team lab. This box is now your go-to for testing:
+And there you have it a fully working web server running DVWA, tied into our Blue Team lab. This box is now your go-to for testing:
 
-Web attacks (SQLi, XSS, etc.)
-
-Logging and alerting
-
-Access control analysis
+- Web attacks (SQLi, XSS, etc.)
+- Logging and alerting
+- Access control analysis
 
 Next up, we’ll add Kali Linux as our external attacker box and later move into SIEM integration to start monitoring all this juicy traffic. 😎
 

@@ -106,7 +106,7 @@ Follow this guide to disable password complexity (for testing weak password scen
 
 ---
 
-### 👤 Create Users
+### Create Users
 - Open **Active Directory Users and Computers**  
 - Right-click **Users** > **New > User**  
 - Naming format: `firstname.lastname`  

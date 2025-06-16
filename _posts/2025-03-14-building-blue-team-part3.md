@@ -22,7 +22,7 @@ Welcome to Part 3 of my Blue Team Home Lab series! In this post, we’ll dive in
 
 ###  Firewall: pfSense  
 
-We’ll use **pfSense** – an open source, powerful firewall suitable for both lab and production use.
+We’ll use **pfSense** - an open source, powerful firewall suitable for both lab and production use.
 
 ### VM Specifications  
 - **CPU:** 1  

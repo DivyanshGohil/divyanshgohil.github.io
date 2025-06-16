@@ -8,7 +8,7 @@ tags:
 ---
 
 ###  Introduction
-Welcome to **Part 4** of the Blue Team Home Lab series! In this section, we’ll be setting up a **DFIR (Digital Forensics and Incident Response)** VM using [**Tsurugi Linux**](https://tsurugi-linux.org/) — a feature-rich and powerful distro designed for digital forensics.
+Welcome to **Part 4** of the Blue Team Home Lab series! In this section, we’ll be setting up a **DFIR (Digital Forensics and Incident Response)** VM using [**Tsurugi Linux**](https://tsurugi-linux.org/) a feature-rich and powerful distro designed for digital forensics.
 
 > **Note:** This guide focuses on environment setup. You are encouraged to explore the tools and techniques yourself.
 
@@ -16,7 +16,7 @@ Welcome to **Part 4** of the Blue Team Home Lab series! In this section, we’ll
 
 ### What We’ve Done So Far
 
-In [Part 3](https://divyanshgohil.github.io/2025/03/14/Building-Blue-Team-Home-Lab-Part-3.html), we deployed our first VM — a **firewall**. We:
+In [Part 3](https://divyanshgohil.github.io/2025/03/14/Building-Blue-Team-Home-Lab-Part-3.html), we deployed our first VM a **firewall**. We:
 - Configured VLANs
 - Set up DNS & DHCP
 - Created basic firewall rules
@@ -30,7 +30,7 @@ Now, it’s time to **expand our security team** by introducing the **DFIR machi
 While **SANS SIFT Workstation** is a popular choice, we’ve selected **Tsurugi Linux** for:
 - Lightweight **MATE desktop environment**
 - Unique toolset
-- Aesthetic samurai vibes 🇯🇵
+- Aesthetic samurai vibes 
 
 > ⚖️ Try both Tsurugi and SIFT. Use what feels right.
 
@@ -47,15 +47,15 @@ The **DFIR VM** will:
 
 ### Tsurugi Installation Steps
 
-#### 1. Download and Import OVA
+### 1. Download and Import OVA
 - Get the OVA from the [official site](https://tsurugi-linux.org/)
 - Import it into **VMWare** or **VirtualBox**
 
-#### 2. VM Settings
+### 2. VM Settings
 - CPU: 4 Cores (2 processors × 2 cores)
 - Network Adapter: Assign to **VLAN 50** (e.g., `vmnet50`)
 
-#### 3. First Boot
+### 3. First Boot
 - Username: `tsurugi`
 - Password: `tsurugi`
 
@@ -106,7 +106,7 @@ Under **Host Overrides**, click **Add** and enter:
 
 ---
 
-#### Snapshot Reminder
+### Snapshot Reminder
 
 **Create a VM snapshot now!**  
 It will serve as your rollback point in case you break something or need to revert to a clean, functional state.

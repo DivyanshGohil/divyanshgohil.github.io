@@ -117,7 +117,7 @@ The resulting topology looks something like this (drawn using [draw.io](https://
 
 This post was inspired by and adapted from:
 
-🔗 [Blue Team Lab Guide – Part 2 by Marko Andrejic](https://facyber.me/posts/blue-team-lab-guide-part-2/)
+🔗 [Blue Team Lab Guide - Part 2 by Marko Andrejic](https://facyber.me/posts/blue-team-lab-guide-part-2/)
 
 ---
 
