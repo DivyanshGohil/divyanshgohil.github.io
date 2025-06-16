@@ -32,7 +32,7 @@ While **SANS SIFT Workstation** is a popular choice, we’ve selected **Tsurugi 
 - Unique toolset
 - Aesthetic samurai vibes 
 
-> ⚖️ Try both Tsurugi and SIFT. Use what feels right.
+> Try both Tsurugi and SIFT. Use what feels right.
 
 ---
 
@@ -70,7 +70,7 @@ This section covers **hostname configuration**, **network settings**, **tool ins
 
 ---
 
-#### Hostname Setup
+### Hostname Setup
 
 **Edit** `/etc/hosts`
 
@@ -93,7 +93,7 @@ This section covers **hostname configuration**, **network settings**, **tool ins
 
 ---
 
-#### Firewall DNS Resolver Host Override (pfsense VM)
+### Firewall DNS Resolver Host Override (pfsense VM)
 
 > Navigate to: Services > DNS Resolver > General Settings
 Under **Host Overrides**, click **Add** and enter:

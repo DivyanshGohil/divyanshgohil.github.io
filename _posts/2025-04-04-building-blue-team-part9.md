@@ -95,4 +95,4 @@ Down the road, we may add more offensive tools if Kali’s default toolkit isn�
 Next up:
 We’ll (finally) start deploying our SIEM solution—we’ll be using Security Onion. Stay tuned!
 
-Until next time—keep testing, keep hardening. 💪
+Until next time—keep testing, keep hardening.

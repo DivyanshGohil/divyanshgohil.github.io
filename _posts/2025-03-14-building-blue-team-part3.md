@@ -56,13 +56,13 @@ Install pfSense using default settings. Once booted:
 | Security         | 10.0.50.254/24   |
 | Isolation LAN    | 10.0.99.254/24   |
 
-> ⚠️ WAN subnet depends on your actual ISP network (commonly 192.168.1.0/24 or 192.168.0.0/24).
+>  WAN subnet depends on your actual ISP network (commonly 192.168.1.0/24 or 192.168.0.0/24).
 
 ---
 
 ### Configuration  
 
-#### Interfaces  
+### Interfaces  
 1. Navigate to `Interfaces > Interface Assignments`  
 2. Add all NICs, save.  
 3. Enable and set for each:  
@@ -72,7 +72,7 @@ Install pfSense using default settings. Once booted:
 
 ---
 
-#### 🛠️ Basic Setup  
+### Basic Setup  
 Go to `System > General Setup`  
 - **Hostname:** firewall  
 - **Domain:** cyber.hub  
@@ -90,37 +90,37 @@ Then, in `System > Advanced > Admin Access`:
 
 > Start with allowing all traffic, then gradually restrict based on your lab requirements.
 
-#### WAN (`192.168.1.50/24`)  
-- ⛔ Block Private & Bogon networks (default)  
-- ⛔ No inbound from internal VLANs unless explicitly required
+### WAN (`192.168.1.50/24`)  
+-  Block Private & Bogon networks (default)  
+-  No inbound from internal VLANs unless explicitly required
 
 #### MANAGEMENT (`10.0.1.50/24`)  
-- ✅ Access from local machine (vmnet1)  
-- ✅ Anti-lockout rule (default)  
-- ⛔ Disable default IPv6 pass rule  
-- ⛔ No access from other VLANs (Security, Isolation, etc.)
+-  Access from local machine (vmnet1)  
+-  Anti-lockout rule (default)  
+-  Disable default IPv6 pass rule  
+-  No access from other VLANs (Security, Isolation, etc.)
 
 #### CORPORATE WAN (`10.0.10.254/24`)  
-- ✅ Allow from Corporate LAN (`10.0.20.0/24`)  
-- ✅ Outbound access to fake WAN or internet  
-- ⛔ Deny from Security and Isolation VLANs
+-  Allow from Corporate LAN (`10.0.20.0/24`)  
+-  Outbound access to fake WAN or internet  
+-  Deny from Security and Isolation VLANs
 
 #### CORPORATE LAN (`10.0.20.254/24`)  
-- ✅ Allow to Corporate WAN (`10.0.10.0/24`)  
-- ✅ Allow to Management (`10.0.1.0/24`)  
-- ⛔ Deny to WAN and Security by default  
-- ⛔ Block traffic to Isolation VLAN
+-  Allow to Corporate WAN (`10.0.10.0/24`)  
+-  Allow to Management (`10.0.1.0/24`)  
+-  Deny to WAN and Security by default  
+-  Block traffic to Isolation VLAN
   
 #### SECURITY (`10.0.50.254/24`)  
-- ✅ Allow to Corporate LAN (`10.0.20.0/24`)  
-- ✅ Allow to Isolation VLAN (`10.0.99.0/24`)  
-- ⛔ Deny to WAN, Management, Corporate WAN  
-- ⛔ Block all unnecessary outbound unless via VPN
+-  Allow to Corporate LAN (`10.0.20.0/24`)  
+-  Allow to Isolation VLAN (`10.0.99.0/24`)  
+-  Deny to WAN, Management, Corporate WAN  
+-  Block all unnecessary outbound unless via VPN
 
 #### ISOLATION (`10.0.99.254/24`)  
-- ⛔ Deny to all other VLANs  
-- ✅ Optional: Allow only logging or update servers  
-- ✅ Add explicit deny rule for extra safety
+-  Deny to all other VLANs  
+-  Optional: Allow only logging or update servers  
+-  Add explicit deny rule for extra safety
 
 ---
 
@@ -134,14 +134,19 @@ Set NAT rules at `Firewall > NAT > Outbound`:
 | `10.0.20.0/24`        | 10.0.10.254 (Fake) | CORPORATE_LAN_VLAN20       |
 | `10.0.99.0/24`        | ✖️ (No Internet)    | N/A (Blocked)              |
 
-> ⚠️ Double-check interface bindings in the Outbound NAT tab—make sure, for example, `CORPORATE_LAN_VLAN20` is used correctly instead of defaulting to WAN.
+> Double-check interface bindings in the Outbound NAT tab—make sure, for example, `CORPORATE_LAN_VLAN20` is used correctly instead of defaulting to WAN.
 
 ---
 
 
 ### Summary  
 
-We've deployed a pfSense firewall, created VLAN rules, assigned IPs, and set up access. With traffic control in place, we're ready to move on to **building our security environment** in the next part. Stay tuned! 🚀
+We've deployed a pfSense firewall, created VLAN rules, assigned IPs, and set up access. With traffic control in place, we're ready to move on to **building our security environment** in the next part. Stay tuned! 
 
 ---
-**🔗 [Reference](https://facyber.me/posts/blue-team-lab-guide-part-3/)**  
+
+### Reference
+
+This post was inspired by and adapted from:
+
+[Blue Team Lab Guide - Part 3 by Marko Andrejic](https://facyber.me/posts/blue-team-lab-guide-part-3/)

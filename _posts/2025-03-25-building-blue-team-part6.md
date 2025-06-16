@@ -111,8 +111,8 @@ Follow this guide to disable password complexity (for testing weak password scen
 - Right-click **Users** > **New > User**  
 - Naming format: `firstname.lastname`  
 - Use a mix of:
-  - ✅ Strong passwords  
-  - ❌ Weak passwords from `rockyou.txt`  
+  - Strong passwords  
+  - Weak passwords from `rockyou.txt`  
 - Set password to **never expire**
 
 ---
@@ -182,16 +182,16 @@ To simulate realistic conditions, add:
 - Some **images or PDFs**
 - Files with **fake sensitive names** like `employee_data.txt` or `Q3_budget.xlsx`
 
-✅ Now your SMBv1 shares are live and ready for vulnerability scanning, detection, and defense testing.
+ Now your SMBv1 shares are live and ready for vulnerability scanning, detection, and defense testing.
 
 ---
 
-### ✅ Summary  
+### Summary  
 Congrats! You now have a basic **Corporate LAN** setup with:
 
-- ✅ Active Directory  
-- ✅ DHCP & DNS  
-- ✅ Static Routing  
-- ✅ Shared SMBv1 folders  
-- ✅ Weak password policy for attack simulation  
+- Active Directory  
+- DHCP & DNS  
+- Static Routing  
+- Shared SMBv1 folders  
+- Weak password policy for attack simulation  
 

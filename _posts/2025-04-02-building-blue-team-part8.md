@@ -17,7 +17,7 @@ We’ll deploy **Ubuntu Server 22.04 LTS** and install **DVWA (Damn Vulnerable W
 
 ### Ubuntu Installation & Setup
 
-I won’t walk you through installing Ubuntu Server—there are plenty of guides out there. Here’s [one I used on YouTube](https://www.youtube.com) (yep, first result I clicked 😅).
+I won’t walk you through installing Ubuntu Server—there are plenty of guides out there. Here’s [one I used on YouTube](https://www.youtube.com) (yep, first result I clicked).
 
 > Use **NAT or Bridged network adapter** during install for updates and downloads.
 
@@ -70,7 +70,7 @@ systemctl start apache2
 ### Database Setup
 Go to the DVWA interface → Setup / Reset DB → Click Create / Reset Database.
 
-To make the DB more insecure (for testing, of course 😈), allow remote access:
+To make the DB more insecure (for testing, of course), allow remote access:
 
 Edit /etc/mysql/mariadb.conf.d/50-client.cnf:
 ```
@@ -142,7 +142,7 @@ For other VMs in your domain to access the web server, create an A record for sy
 
 Try accessing the web app from your Windows 7 VM to confirm everything is working.
 
-💾 Don’t forget to take snapshots of both your Linux web server and Active Directory VMs.
+Don’t forget to take snapshots of both your Linux web server and Active Directory VMs.
 
 ### Summary
 And there you have it a fully working web server running DVWA, tied into our Blue Team lab. This box is now your go-to for testing:
@@ -151,6 +151,5 @@ And there you have it a fully working web server running DVWA, tied into our Blu
 - Logging and alerting
 - Access control analysis
 
-Next up, we’ll add Kali Linux as our external attacker box and later move into SIEM integration to start monitoring all this juicy traffic. 😎
-
+Next up, we’ll add Kali Linux as our external attacker box and later move into SIEM integration to start monitoring all this juicy traffic.
 Until next time—stay sharp and keep building!
