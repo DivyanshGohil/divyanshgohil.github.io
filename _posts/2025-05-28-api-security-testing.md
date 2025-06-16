@@ -29,11 +29,9 @@ In today's interconnected world, APIs (Application Programming Interfaces) are t
 ## Introduction to APIs
 APIs define the rules for how software components interact. They are critical for modular, scalable architectures but can introduce vulnerabilities if not secured properly. Key points:
 - **Types of Web APIs**: REST and SOAP.
-- **Importance**: Enable third-party integrations, save development time, and improve scalability.
 
----
 
-## SOAP vs. REST
+### SOAP vs. REST
 Two foundational styles of web APIs:
 
 | Aspect          | SOAP                          | REST                          |
