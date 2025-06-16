@@ -7,9 +7,7 @@ tags:
   - Home Lab
 ---
 
-
-
-# 🛡️ Building Blue Team Home Lab - Part 4 : DFIR
+###  Introduction
 
 Welcome to **Part 4** of the Blue Team Home Lab series! In this section, we’ll be setting up a **DFIR (Digital Forensics and Incident Response)** VM using [**Tsurugi Linux**](https://tsurugi-linux.org/) — a feature-rich and powerful distro designed for digital forensics.
 

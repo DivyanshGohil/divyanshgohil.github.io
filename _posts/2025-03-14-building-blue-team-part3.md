@@ -8,16 +8,12 @@ tags:
 ---
 
 
+### Introduction
 
-## 🛡️ Building Blue Team Home Lab - Part 3 : Deploying a Firewall  
-
-
----
-
-### 🔧 Changes to be Done in Previous Setup  
-1 - Corrected Outbound rules; interface for source `10.0.20.0/24` should be `CORPORATE_LAN_VLAN20`.  
-2 - Disabled DHCP service; domain controller now provides DHCP.  
-3 - Added VLAN 99 for malware analysis.
+> ### 🔧 Changes to be Done in Previous Setup  
+> 1 - Corrected Outbound rules; interface for source `10.0.20.0/24` should be `CORPORATE_LAN_VLAN20`.  
+> 2 - Disabled DHCP service; domain controller now provides DHCP.  
+> 3 - Added VLAN 99 for malware analysis.
 
 
 ---

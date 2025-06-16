@@ -8,12 +8,7 @@ tags:
 ---
 
 
-
-# 🛡️ Building a Blue Team Home Lab - Part 8 : Web Server
-
----
-
-## 👋 Introduction
+###  Introduction
 
 Hello everyone! I know it’s been a while—life got a bit hectic, and I needed a break from the lab and the website. But I’m back, and it’s time to move forward with something exciting: setting up a **vulnerable web server**.
 

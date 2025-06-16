@@ -7,9 +7,7 @@ tags:
   - Home Lab
 ---
 
-
-
-# 🛡️ Building Blue Team Home Lab - Part 6 : Corporate LAN (Domain Controller)
+###  Introduction
 
 Welcome back to the lab series! It’s been a while. But now we're diving into setting up a **corporate network** with **Windows Server 2019** as our Domain Controller (AD, DNS, File Share Server).
 

@@ -8,18 +8,14 @@ tags:
 ---
 
 
-
-# 🛡️ Building Blue Team Home Lab - Part 5 : Malware Analysis
-
-
-## 🛠️ Introduction
+###  Introduction
 
 In the previous part, we built a DFIR environment. Now, it's time to build a secure **malware analysis environment**.  
 ⚠️ *Malware analysis is risky. Only proceed if you understand how to sandbox and isolate systems properly.*
 
 ---
 
-## 🌐 Networking for Malware Analysis
+### 🌐 Networking for Malware Analysis
 
 A **sandboxed network** is critical. Use an isolated VLAN (e.g., `VLAN 99`) where malware can’t escape to other VMs or your host.
 

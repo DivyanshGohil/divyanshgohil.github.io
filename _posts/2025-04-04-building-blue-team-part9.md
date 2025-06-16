@@ -9,12 +9,7 @@ tags:
 
 
 
-# 🛡️ Building a Blue Team Home Lab - Part 9 : Bandito
-
-
----
-
-## 👋 Introduction
+###  Introduction
 
 We are close to the end of this guidance toward building the **Blue Team Home Lab**. Last time we configured a **web server** that hosts a website and a **MariaDB** database. I’ve made some changes in the previous article, so be sure to check them before continuing here.
 
