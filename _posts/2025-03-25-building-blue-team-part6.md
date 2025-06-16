@@ -8,14 +8,13 @@ tags:
 ---
 
 ###  Introduction
-
 Welcome back to the lab series! It’s been a while. But now we're diving into setting up a **corporate network** with **Windows Server 2019** as our Domain Controller (AD, DNS, File Share Server).
 
-> ⚠️ **Note:** Microsoft provides 180-day evaluation versions of Windows Server. These are **not for production or personal device use**.
+> **Note:** Microsoft provides 180-day evaluation versions of Windows Server. These are **not for production or personal device use**.
 
 ---
 
-### 🧱 Installation Steps (Quick)
+### Installation Steps (Quick)
 
 1. Download the ISO from Microsoft’s website.
 2. Create a new VM (Name it: `Windows Server 2019`).
@@ -24,10 +23,10 @@ Welcome back to the lab series! It’s been a while. But now we're diving into s
 
 ---
 
-## 🔧 Configuration
+### Configuration
 
 
-### 🖧 Network & Hostname Setup
+### Network & Hostname Setup
 ```bash
 IP Address:      10.0.20.5  
 Subnet Mask:     255.255.255.0  
@@ -36,13 +35,13 @@ DNS:             10.0.20.254
 Hostname:        CHC01
  ```
 
-### 🖥️ Change Hostname
+### Change Hostname
 
 Change the hostname in **System Properties**, e.g., `CHC01`, and restart the VM.
 
 ---
 
-### 📦 Roles & Features
+### Roles & Features
 
 1. Open **Server Manager** > **Manage** > **Add Roles and Features**  
 2. Select and install the following:
@@ -57,7 +56,7 @@ Change the hostname in **System Properties**, e.g., `CHC01`, and restart the VM.
 
 ---
 
-### 📡 DHCP Configuration
+### DHCP Configuration
 
 1. Open **DHCP**: Server Manager > Tools > DHCP  
 2. Right-click **IPv4** > **New Scope**
@@ -76,7 +75,7 @@ Change the hostname in **System Properties**, e.g., `CHC01`, and restart the VM.
 
 ---
 
-### 🧭 DNS Configuration
+### DNS Configuration
 
 1. Open **DNS** via Server Manager > Tools > DNS  
 2. Create **Reverse Lookup Zone**  
@@ -90,7 +89,7 @@ nslookup 10.0.20.254
 ```
 ---
 
-### 🛡️ Routing
+### Routing
 1. Open Routing and Remote Access
 2. Configure Routing
     - Choose Custom > Enable LAN Routing
@@ -101,7 +100,7 @@ nslookup 10.0.20.254
 
 ---
 
-### 🔓 Disable Password Complexity  
+### Disable Password Complexity  
 Follow this guide to disable password complexity (for testing weak password scenarios):  
 [Disable Password Complexity on Server 2016](https://www.wintips.org/how-to-disable-password-complexity-requirements-on-server-2016/)
 
@@ -118,7 +117,7 @@ Follow this guide to disable password complexity (for testing weak password scen
 
 ---
 
-### 🧑‍🤝‍🧑 Create Groups 
+### Create Groups 
 - Create new **OU** (Organization Unit): `Groups`  
 - Inside, create groups:
   - `HR`
@@ -128,7 +127,7 @@ Follow this guide to disable password complexity (for testing weak password scen
 - Add a few users to the **Administrators** group
 
 
-### 🛡️ Configure Local Admin GPO  
+### Configure Local Admin GPO  
 - Open **Group Policy Management**  
 - Create a new GPO: `Local Admin GPO`  
 - Edit GPO: `Computer Configuration > Policies > Windows Settings > Security Settings > Restricted Groups`
@@ -137,15 +136,15 @@ Follow this guide to disable password complexity (for testing weak password scen
 
 ---
 
-### 📁 Shared Folder (SMBv1)
-#### ⚠️ Why SMBv1?
+### Shared Folder (SMBv1)
+#### Why SMBv1?
 
 We're enabling **SMBv1** to simulate insecure configurations for Blue Team detection and mitigation practice.  
 **Note:** SMBv1 is deprecated and insecure — avoid using it in production environments.
 
 ---
 
-### 📂 Folder Structure
+### Folder Structure
 
 Create the following structure on the `C:` drive:
 ```
@@ -158,7 +157,7 @@ C:\
 
 ---
 
-### 🔧 Sharing & Permissions
+### Sharing & Permissions
 
 For **each** folder inside `cyberhubshared` (including the parent):
 
@@ -176,7 +175,7 @@ Repeat for:
 
 ---
 
-### 📝 Add Sample Files
+### Add Sample Files
 
 To simulate realistic conditions, add:
 - A few **text files**

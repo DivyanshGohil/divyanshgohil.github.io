@@ -8,12 +8,11 @@ tags:
 ---
 
 ###  Introduction
-
 After a while, I returned with a new tutorial, a continuation of my **Blue Team Home Lab** series, and this time it’s about adding the end devices to our lab. For this part, we are going to use **Windows 7** and **Windows 10** evaluation images, which can be downloaded from [here](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). Download the **IE11 on Win7** and **MSEdge on Win10** images.
 
 ---
 
-## 🛠️ Prerequisite
+### Prerequisite
 
 Before we continue, make sure you’ve completed all the steps from **Part 6** where we set up the **Domain Controller (DC)**. In this part, we'll join VMs to the domain.
 
@@ -21,7 +20,7 @@ Also, ensure both the **firewall** and **DC** are powered on.
 
 ---
 
-## 🖥️ Windows 7 VM
+### Windows 7 VM
 
 Let’s start with the old one. Yes, I know **Windows 7** is not officially supported anymore, but it's still widely found in many environments.
 
@@ -33,9 +32,9 @@ Let’s start with the old one. Yes, I know **Windows 7** is not officially supp
 - **HDD**: 40GB  
 - **Network Adapter**: vmnet20  
 
-> 💡 The installation of Windows 7 is not covered here—check YouTube for guides.
+> The installation of Windows 7 is not covered here—check YouTube for guides.
 
-### 🔧 Post-Installation Configuration
+### Post-Installation Configuration
 
 #### Enable ICMP in Windows Firewall
 
@@ -52,7 +51,7 @@ Let’s start with the old one. Yes, I know **Windows 7** is not officially supp
 4. Click `Change`, and set **Computer name** to: `RC-MEETING-PC01`
 5. Save and **restart** the VM
 
-### 👥 Joining the Domain
+### Joining the Domain
 
 1. Return to `System Properties > Change`
 2. Choose **Domain** instead of workgroup
@@ -60,7 +59,7 @@ Let’s start with the old one. Yes, I know **Windows 7** is not officially supp
 4. When prompted, provide **Administrator credentials**
 5. Restart the VM upon success
 
-### 🧪 Testing Domain User
+### Testing Domain User
 
 1. On login screen, click `Switch user > Other User`
 2. Log in with the **HR** user from the previous article
@@ -69,7 +68,7 @@ Let’s start with the old one. Yes, I know **Windows 7** is not officially supp
 
 ---
 
-## 🖥️ Windows 10 VM
+### Windows 10 VM
 
 Now let’s set up the **Windows 10** machine.
 
@@ -102,7 +101,7 @@ Now let’s set up the **Windows 10** machine.
 
 ---
 
-## ✅ Summary
+### Summary
 
 We now have two end devices added to our lab that simulate corporate machines:
 
@@ -113,6 +112,6 @@ Both are domain-joined and have access to shared company resources. These machin
 
 ---
 
-🔜 **Next Up**: We’ll deploy a **Linux server** that acts as a simple **web and database server**, complete with **exploitable vulnerabilities** for future simulation and defense scenarios.
+**Next Up**: We’ll deploy a **Linux server** that acts as a simple **web and database server**, complete with **exploitable vulnerabilities** for future simulation and defense scenarios.
 
 Stay tuned!

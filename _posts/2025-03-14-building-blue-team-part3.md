@@ -9,8 +9,9 @@ tags:
 
 
 ### Introduction
+Welcome to Part 3 of my Blue Team Home Lab series! In this post, we’ll dive into the **firewall** setup and configuration for our network.
 
-> ### 🔧 Changes to be Done in Previous Setup  
+> ### Changes to be Done in Previous Setup  
 > 1 - Corrected Outbound rules; interface for source `10.0.20.0/24` should be `CORPORATE_LAN_VLAN20`.  
 > 2 - Disabled DHCP service; domain controller now provides DHCP.  
 > 3 - Added VLAN 99 for malware analysis.
@@ -19,11 +20,11 @@ tags:
 ---
 
 
-## 🔥 Firewall: pfSense  
+###  Firewall: pfSense  
 
 We’ll use **pfSense** – an open source, powerful firewall suitable for both lab and production use.
 
-### 💻 VM Specifications  
+### VM Specifications  
 - **CPU:** 1  
 - **RAM:** 512MB  
 - **HDD:** 30GB  
@@ -35,12 +36,12 @@ We’ll use **pfSense** – an open source, powerful firewall suitable for both 
   - vmnet50 (Security)  
   - vmnet99 (Isolation)  
 
-> 💡 **Why 6 NICs?**  
+> **Why 6 NICs?**  
 One per VLAN, plus one bridged interface to provide outbound traffic for Security VLAN.
 
 ---
 
-## 🧱 Installation  
+### Installation  
 
 Install pfSense using default settings. Once booted:  
 1. Configure WAN & Management interfaces (CLI).  
@@ -59,9 +60,9 @@ Install pfSense using default settings. Once booted:
 
 ---
 
-## ⚙️ Configuration  
+### Configuration  
 
-### 🌐 Interfaces  
+#### Interfaces  
 1. Navigate to `Interfaces > Interface Assignments`  
 2. Add all NICs, save.  
 3. Enable and set for each:  
@@ -71,7 +72,7 @@ Install pfSense using default settings. Once booted:
 
 ---
 
-### 🛠️ Basic Setup  
+#### 🛠️ Basic Setup  
 Go to `System > General Setup`  
 - **Hostname:** firewall  
 - **Domain:** cyber.hub  
@@ -85,45 +86,45 @@ Then, in `System > Advanced > Admin Access`:
 
 ---
 
-## 🔒 Firewall Rules  
+### Firewall Rules  
 
 > Start with allowing all traffic, then gradually restrict based on your lab requirements.
 
-### 🌐 WAN (`192.168.1.50/24`)  
+#### WAN (`192.168.1.50/24`)  
 - ⛔ Block Private & Bogon networks (default)  
 - ⛔ No inbound from internal VLANs unless explicitly required
 
-### 🧑‍💻 MANAGEMENT (`10.0.1.50/24`)  
+#### MANAGEMENT (`10.0.1.50/24`)  
 - ✅ Access from local machine (vmnet1)  
 - ✅ Anti-lockout rule (default)  
 - ⛔ Disable default IPv6 pass rule  
 - ⛔ No access from other VLANs (Security, Isolation, etc.)
 
-### 🖧 CORPORATE WAN (`10.0.10.254/24`)  
+#### CORPORATE WAN (`10.0.10.254/24`)  
 - ✅ Allow from Corporate LAN (`10.0.20.0/24`)  
 - ✅ Outbound access to fake WAN or internet  
 - ⛔ Deny from Security and Isolation VLANs
 
-### 🖧 CORPORATE LAN (`10.0.20.254/24`)  
+#### CORPORATE LAN (`10.0.20.254/24`)  
 - ✅ Allow to Corporate WAN (`10.0.10.0/24`)  
 - ✅ Allow to Management (`10.0.1.0/24`)  
 - ⛔ Deny to WAN and Security by default  
 - ⛔ Block traffic to Isolation VLAN
   
-### 🛡️ SECURITY (`10.0.50.254/24`)  
+#### SECURITY (`10.0.50.254/24`)  
 - ✅ Allow to Corporate LAN (`10.0.20.0/24`)  
 - ✅ Allow to Isolation VLAN (`10.0.99.0/24`)  
 - ⛔ Deny to WAN, Management, Corporate WAN  
 - ⛔ Block all unnecessary outbound unless via VPN
 
-### 🔬 ISOLATION (`10.0.99.254/24`)  
+#### ISOLATION (`10.0.99.254/24`)  
 - ⛔ Deny to all other VLANs  
 - ✅ Optional: Allow only logging or update servers  
 - ✅ Add explicit deny rule for extra safety
 
 ---
 
-### 📤 Outbound NAT Rules  
+### Outbound NAT Rules  
 
 Set NAT rules at `Firewall > NAT > Outbound`:
 
@@ -138,7 +139,7 @@ Set NAT rules at `Firewall > NAT > Outbound`:
 ---
 
 
-## 📌 Summary  
+### Summary  
 
 We've deployed a pfSense firewall, created VLAN rules, assigned IPs, and set up access. With traffic control in place, we're ready to move on to **building our security environment** in the next part. Stay tuned! 🚀
 

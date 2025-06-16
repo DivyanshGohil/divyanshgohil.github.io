@@ -9,27 +9,26 @@ tags:
 
 
 ###  Introduction
-
 Hello everyone! I know it’s been a while—life got a bit hectic, and I needed a break from the lab and the website. But I’m back, and it’s time to move forward with something exciting: setting up a **vulnerable web server**.
 
 We’ll deploy **Ubuntu Server 22.04 LTS** and install **DVWA (Damn Vulnerable Web Application)**. This setup will be super useful for simulating web attacks, analyzing logs, and practicing Blue Team detection techniques.
 
 ---
 
-## 🖥️ Ubuntu Installation & Setup
+### Ubuntu Installation & Setup
 
 I won’t walk you through installing Ubuntu Server—there are plenty of guides out there. Here’s [one I used on YouTube](https://www.youtube.com) (yep, first result I clicked 😅).
 
-> ⚠️ Use **NAT or Bridged network adapter** during install for updates and downloads.
+> Use **NAT or Bridged network adapter** during install for updates and downloads.
 
-### 🛠️ Install Required Packages
+### Install Required Packages
 
 ```bash
 apt update
 apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php nano unzip fping
 ```
 
-## 📦 Download DVWA
+### Download DVWA
 ```
 cd /var/www/html
 wget https://github.com/digininja/DVWA/archive/master.zip
@@ -37,7 +36,7 @@ unzip master.zip
 mv DVWA-master DVWA
 ```
 
-## 🌐 Set Static IP (VLAN 20)
+### Set Static IP (VLAN 20)
 Edit /etc/netplan/01-network-config-01.yaml
 ```
 network:
@@ -54,13 +53,13 @@ network:
                   via: 10.0.20.254
 
 ```
->🧠 Use ip a to confirm your interface name (mine is ens33).
+> Use ip a to confirm your interface name (mine is ens33).
 Apply the changes:
 ```
   netplan apply
 
 ```
-## 🧩 DVWA Installation & Configuration
+### DVWA Installation & Configuration
 Start Apache:
 ```
 systemctl start apache2
@@ -68,7 +67,7 @@ systemctl start apache2
 >Access in Browser:
 >Visit http://10.0.20.10/DVWA/ from your host machine.
 
-## 🗃️ Database Setup
+### Database Setup
 Go to the DVWA interface → Setup / Reset DB → Click Create / Reset Database.
 
 To make the DB more insecure (for testing, of course 😈), allow remote access:
@@ -83,9 +82,9 @@ Then:
 systemctl restart mariadb
 ss -tnlp
 ```
-> ✅ Ensure DB is accessible from any source.
+> Ensure DB is accessible from any source.
 
-## 🔐 Fix Permissions & PHP Settings
+### Fix Permissions & PHP Settings
 
 ```
 chmod 777 /var/www/html/DVWA/hackable/uploads/
@@ -99,7 +98,7 @@ allow_url_fopen = On
 allow_url_include = On
 ```
 
-## 🌐 Apache & DNS Setup
+### Apache & DNS Setup
 Configure Virtual Host
 ```
 cd /etc/apache2/sites-available
@@ -138,14 +137,14 @@ Edit /etc/hosts on your host machine:
 ```
 Now you can access DVWA via http://system.cyber.hub.
 
-## 📡 Active Directory Configuration
+### Active Directory Configuration
 For other VMs in your domain to access the web server, create an A record for system.cyber.hub just like you did for the firewall in Part 6.
 
 Try accessing the web app from your Windows 7 VM to confirm everything is working.
 
 💾 Don’t forget to take snapshots of both your Linux web server and Active Directory VMs.
 
-## ✅ Summary
+### Summary
 And there you have it—a fully working web server running DVWA, tied into our Blue Team lab. This box is now your go-to for testing:
 
 Web attacks (SQLi, XSS, etc.)
