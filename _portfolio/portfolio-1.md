@@ -1,7 +1,7 @@
 ---
 title: "FuzzCraft"
 date: 2025-06-15
-excerpt: "A high-performance web path fuzzer written in Go with intelligent filtering and progress tracking.<br/><img src='images/fuzzcraft.png'>"
+excerpt: "A high-performance web path fuzzer written in Go with intelligent filtering and progress tracking.<br/><img src='/images/fuzzcraft.png'>"
 collection: portfolio
 ---
 
@@ -30,7 +30,7 @@ go build
 
 ### Basic Option
 |Flag|Description|Example|
-|-----|----------|-------|
+|----|-----------|-------|
 |-u|Target URL with FUZZ placeholder|http://example.com/FUZZ|
 |-w|Path to wordlist file|wordlists/common.txt|
 |-t|Number of Threads (default 50)|-t 100|
