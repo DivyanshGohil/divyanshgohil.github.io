@@ -18,34 +18,39 @@ collection: portfolio
 ## Installation
 
 ### From Source
+
 ```bash
 git clone https://github.com/DivyanshGohil/FuzzCraft.git
 cd FuzzCraft
 go build
 ```
 ## Usage
+
 ```bash
 ./FuzzCraft -u http://example.com/FUZZ -w wordlists/common.txt [options]
 ```
 
 ### Basic Option
-|**Flag**|**Description**                     |**Example**               |
-|--------|------------------------------------|--------------------------|
-|-u      |Target URL with FUZZ placeholder    |http://example.com/FUZZ   |
-|-w      |Path to wordlist file               |wordlists/common.txt      |
-|-t      |Number of Threads (default 50)      |-t 100                    |
-|-fc     |Filter status codes (comma or range)|-fc 200,301 or -fc 200-399|
+
+|**Flag** |**Description**                       |**Example**                 |
+|---------|--------------------------------------|----------------------------|
+| -u      | Target URL with FUZZ placeholder     | http://example.com/FUZZ    |
+| -w      | Path to wordlist file                | wordlists/common.txt       |
+| -t      | Number of Threads (default 50)       | -t 100                     |
+| -fc     | Filter status codes (comma or range) | -fc 200,301 or -fc 200-399 |
 
 ### Advanced Option
-|**Flag**|**Description**                 |
-|--------|--------------------------------|
-|-X      |HTTP method (default: GET)      |
-|-H      |Custom headers (comma separated)|
-|-d      |POST/PUT data                   |
-|-o      |Output file for results         |
-|-k      |Allow insecure SSL connections  |
+
+|**Flag** |**Description**                  |
+|---------|---------------------------------|
+| -X      | HTTP method (default: GET)      |
+| -H      | Custom headers (comma separated)|
+| -d      | POST/PUT data                   |
+| -o      | Output file for results         |
+| -k      | Allow insecure SSL connections  |
 
 ## Basic Examples
+
 1. Basic Fuzzing
 ```bash
 ./FuzzCraft -u http://test.com/FUZZ -w wordlists/common.txt
