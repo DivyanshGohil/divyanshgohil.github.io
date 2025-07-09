@@ -7,12 +7,12 @@ tags:
   - Home Lab
 ---
 
-### Introduction
+## Introduction
 Welcome to Part 2 of my Blue Team Home Lab series! In this post, we’ll dive into the **network topology** and **VLAN design** that power a secure, flexible, and scalable cyber defense lab.
 
 ---
 
-### Quick Recap
+## Quick Recap
 
 In Part 1, we talked about:
 - Why I built a home lab
@@ -23,7 +23,7 @@ Now it’s time to lay out the **networking foundation** for everything that fol
 
 ---
 
-### Design Goals
+## Design Goals
 
 Before spinning up VMs, I created a list of what I want to do in this lab:
 - SIEM
@@ -37,7 +37,7 @@ This helped shape the topology and host selection.
 
 ---
 
-### Core Hosts and Services
+## Core Hosts and Services
 
 Planned hosts include:
 
@@ -62,7 +62,7 @@ Planned services:
 
 ---
 
-### VLAN & Subnet Planning
+## VLAN & Subnet Planning
 
 The lab will use **VLAN segmentation** for security and clarity. Here’s the setup:
 
@@ -83,7 +83,7 @@ Each VLAN represents a distinct zone:
 
 ---
 
-### VLAN Creation in VMware
+## VLAN Creation in VMware
 
 If you're using **VMware Workstation Pro**:
 
@@ -95,7 +95,7 @@ If you're using **VMware Workstation Pro**:
 
 ---
 
-### Final Topology
+## Final Topology
 
 The resulting topology looks something like this (drawn using [draw.io](https://draw.io)):
 
@@ -104,7 +104,7 @@ The resulting topology looks something like this (drawn using [draw.io](https://
 
 ---
 
-### Summary
+## Summary
 
 - We defined **network segments** via VLANs
 - Planned IP addressing and host types
@@ -113,7 +113,7 @@ The resulting topology looks something like this (drawn using [draw.io](https://
 
 ---
 
-### Reference
+## Reference
 
 This post was inspired by and adapted from:
 

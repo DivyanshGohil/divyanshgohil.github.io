@@ -7,14 +7,14 @@ tags:
   - Home Lab
 ---
 
-###  Introduction
+##  Introduction
 Welcome back to the lab series! It’s been a while. But now we're diving into setting up a **corporate network** with **Windows Server 2019** as our Domain Controller (AD, DNS, File Share Server).
 
 > **Note:** Microsoft provides 180-day evaluation versions of Windows Server. These are **not for production or personal device use**.
 
 ---
 
-### Installation Steps (Quick)
+## Installation Steps (Quick)
 
 1. Download the ISO from Microsoft’s website.
 2. Create a new VM (Name it: `Windows Server 2019`).
@@ -23,7 +23,7 @@ Welcome back to the lab series! It’s been a while. But now we're diving into s
 
 ---
 
-### Configuration
+## Configuration
 
 
 ### Network & Hostname Setup
@@ -186,7 +186,7 @@ To simulate realistic conditions, add:
 
 ---
 
-### Summary  
+## Summary  
 Congrats! You now have a basic **Corporate LAN** setup with:
 
 - Active Directory  

@@ -8,13 +8,13 @@ tags:
 ---
 
 
-###  Introduction
+##  Introduction
 In the previous part, we built a DFIR environment. Now, it's time to build a secure **malware analysis environment**.  
 > Malware analysis is risky. Only proceed if you understand how to sandbox and isolate systems properly.
 
 ---
 
-### Networking for Malware Analysis
+## Networking for Malware Analysis
 
 A **sandboxed network** is critical. Use an isolated VLAN (e.g., `VLAN 99`) where malware can’t escape to other VMs or your host.
 
@@ -32,7 +32,7 @@ A **sandboxed network** is critical. Use an isolated VLAN (e.g., `VLAN 99`) wher
 
 ---
 
-### Windows Malware Analysis VM
+## Windows Malware Analysis VM
 
 ### Tools:
 - **Microsoft Edge on Windows 10** VM
@@ -105,14 +105,14 @@ network:
  **Create a new snapshot** so you can always revert to it when starting with a new analysis.
 
 ---
-### Recommended Tutorials
+## Recommended Tutorials
 
 - **[Malware Analysis Bootcamp](https://www.youtube.com/playlist?list=PLBf0hzazHTGOEuhPQSnq-EjCzjWZ_TIFc)** – HackerSploit's guide with Flare VM  
 - **[Noob2Ninja Malware Analysis Course](https://www.youtube.com/playlist?list=PL_Ubt4He1EFlS5Z4C3OXN3dlbGf2e8K0X)** – By Neil Fox, builds a lab from scratch with Windows 7
 
 ---
 
-### Summary
+## Summary
 
 You've now set up isolated Windows and Linux malware analysis environments using **Flare VM** and **REMnux**.  
 Always be cautious—malware can escape VMs and affect host machines.

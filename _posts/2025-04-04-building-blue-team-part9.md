@@ -9,7 +9,7 @@ tags:
 
 
 
-###  Introduction
+##  Introduction
 We are close to the end of this guidance toward building the **Blue Team Home Lab**. Last time we configured a **web server** that hosts a website and a **MariaDB** database. I’ve made some changes in the previous article, so be sure to check them before continuing here.
 
 This time, we will focus on creating a **Bandito network** or better said, simulating an **external network** where our threats originate from. This network will contain a **Kali Linux** machine, which we’ll use to simulate attacks that we can later detect using our **SIEM**.
@@ -18,7 +18,7 @@ Let’s get started.
 
 ---
 
-### Installation and Configuration
+## Installation and Configuration
 
 First, download the Kali Linux VM that suits your needs. In my case, I used the **VMware** version.
 
@@ -33,7 +33,7 @@ sudo apt upgrade
 
 >After all updates are installed, reboot the VM. Once rebooted, shut it down.
 
-### Network Configuration
+## Network Configuration
 Now let’s reconfigure our Bandito (Kali Linux) machine to use a Fake WAN network. This simulates Internet access without actually exposing the VM, helping prevent accidental outbound attacks into real environments.
 
 In your VMware/VirtualBox settings, change the network adapter to VLAN 10 (or your designated external network).
@@ -42,7 +42,7 @@ Then power on the machine.
 
 > Tip: Create a snapshot of the VM at this point. It will serve as a clean backup in case anything breaks later.
 
-### Firewall Configuration
+## Firewall Configuration
 With the current setup, our Bandito machine is logically coming from an "external" network. In a real scenario, there would be firewalls, routers, and IP address translations. Here, we simulate that idea simply.
 
 Next, we’ll allow access from this external network to internal services like:
@@ -85,7 +85,7 @@ ssh -p 4422 user@10.0.20.10
 3. MySQL Access
 Test the MariaDB connection (e.g., using mysql or a scanning tool) to ensure port 3306 is open.
 
-### Summary
+## Summary
 That’s it for today!
 
 We now have a malicious machine inside our Racoon network for testing attacks and monitoring how our internal defenses respond.

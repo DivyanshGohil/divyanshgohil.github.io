@@ -8,7 +8,7 @@ tags:
 ---
 
 
-### Introduction
+## Introduction
 Welcome to Part 3 of my Blue Team Home Lab series! In this post, we’ll dive into the **firewall** setup and configuration for our network.
 
 > ### Changes to be Done in Previous Setup  
@@ -20,7 +20,7 @@ Welcome to Part 3 of my Blue Team Home Lab series! In this post, we’ll dive in
 ---
 
 
-###  Firewall: pfSense  
+## Firewall: pfSense  
 
 We’ll use **pfSense** - an open source, powerful firewall suitable for both lab and production use.
 
@@ -41,7 +41,7 @@ One per VLAN, plus one bridged interface to provide outbound traffic for Securit
 
 ---
 
-### Installation  
+## Installation  
 
 Install pfSense using default settings. Once booted:  
 1. Configure WAN & Management interfaces (CLI).  
@@ -60,7 +60,7 @@ Install pfSense using default settings. Once booted:
 
 ---
 
-### Configuration  
+## Configuration  
 
 ### Interfaces  
 1. Navigate to `Interfaces > Interface Assignments`  
@@ -86,7 +86,7 @@ Then, in `System > Advanced > Admin Access`:
 
 ---
 
-### Firewall Rules  
+## Firewall Rules  
 
 > Start with allowing all traffic, then gradually restrict based on your lab requirements.
 
@@ -139,13 +139,13 @@ Set NAT rules at `Firewall > NAT > Outbound`:
 ---
 
 
-### Summary  
+## Summary  
 
 We've deployed a pfSense firewall, created VLAN rules, assigned IPs, and set up access. With traffic control in place, we're ready to move on to **building our security environment** in the next part. Stay tuned! 
 
 ---
 
-### Reference
+## Reference
 
 This post was inspired by and adapted from:
 

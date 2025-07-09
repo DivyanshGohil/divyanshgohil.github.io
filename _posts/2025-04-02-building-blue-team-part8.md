@@ -8,14 +8,14 @@ tags:
 ---
 
 
-###  Introduction
+##  Introduction
 Hello everyone! I know it’s been a while, life got a bit hectic, and I needed a break from the lab and the website. But I’m back, and it’s time to move forward with something exciting: setting up a **vulnerable web server**.
 
 We’ll deploy **Ubuntu Server 22.04 LTS** and install **DVWA (Damn Vulnerable Web Application)**. This setup will be super useful for simulating web attacks, analyzing logs, and practicing Blue Team detection techniques.
 
 ---
 
-### Ubuntu Installation & Setup
+## Ubuntu Installation & Setup
 
 I won’t walk you through installing Ubuntu Server—there are plenty of guides out there. Here’s [one I used on YouTube](https://www.youtube.com) (yep, first result I clicked).
 
@@ -137,14 +137,14 @@ Edit /etc/hosts on your host machine:
 ```
 Now you can access DVWA via http://system.cyber.hub.
 
-### Active Directory Configuration
+## Active Directory Configuration
 For other VMs in your domain to access the web server, create an A record for system.cyber.hub just like you did for the firewall in Part 6.
 
 Try accessing the web app from your Windows 7 VM to confirm everything is working.
 
 Don’t forget to take snapshots of both your Linux web server and Active Directory VMs.
 
-### Summary
+## Summary
 And there you have it a fully working web server running DVWA, tied into our Blue Team lab. This box is now your go-to for testing:
 
 - Web attacks (SQLi, XSS, etc.)

@@ -7,18 +7,18 @@ tags:
   - Home Lab
 ---
 
-### Introduction
+## Introduction
 Welcome to the first part of my Blue Team Home Lab series! This guide is for anyone who wants to build a hands-on virtual cybersecurity lab without spending a fortune.
 
 ---
 
-### Why Build a Home Lab?
+## Why Build a Home Lab?
 
 Like many others, I’ve used platforms like TryHackMe and Hack The Box, which are awesome but they don’t allow for open-ended experimentation. I wanted something where I could freely explore, test tools, break things, and fix them again. I’ve built everything **virtually on my PC**, saving money and adding flexibility.
 
 ---
 
-### My PC Setup
+## My PC Setup
 
 Here’s the hardware I’m using to run the lab:
 
@@ -31,7 +31,7 @@ Here’s the hardware I’m using to run the lab:
 
 ---
 
-### Tools We’ll Use
+## Tools We’ll Use
 
 Below are the main tools and platforms I’ll use in this series:
 
@@ -48,7 +48,7 @@ Below are the main tools and platforms I’ll use in this series:
 
 ---
 
-### What’s Next?
+## What’s Next?
 
 In the next part of this series, we’ll:
 
@@ -60,7 +60,7 @@ Stay tuned and feel free to fork this project or contribute your own ideas!
 
 ---
 
-### Reference
+## Reference
 
 This post was inspired by and adapted from:
 
