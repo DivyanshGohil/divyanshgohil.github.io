@@ -1,7 +1,7 @@
 ---
 title: "HoneyDrive"
 date: 2025-05-11
-excerpt: "HoneyDrive is an open-source, pre-configured virtual appliance for honeypots and network security monitoring. Built on Xubuntu Linux, it integrates over 10 popular honeypot tools (like Dionaea, Kippo, Honeyd) and 20+ related analysis utilities. It enables cybersecurity professionals to quickly deploy a full honeypot system for threat intelligence, malware analysis, and intrusion detection <br/><img src='/images/honeydrive/honeydrive.png'>"
+excerpt: "HoneyDrive is an open-source, pre-configured virtual appliance for honeypots and network security monitoring. Built on Xubuntu Linux, it integrates over 10 popular honeypot tools (like Dionaea, Kippo, Honeyd) and 20+ related analysis utilities. It enables cybersecurity professionals to quickly deploy a full honeypot system for threat intelligence, malware analysis, and intrusion detection <br/>"
 collection: portfolio
 ---
 

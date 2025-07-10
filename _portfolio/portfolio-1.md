@@ -1,7 +1,7 @@
 ---
 title: "FuzzCraft"
 date: 2025-06-15
-excerpt: "A high-performance web path fuzzer written in Go with intelligent filtering and progress tracking.<br/><img src='/images/fuzzcraft.png'>"
+excerpt: "A high-performance web path fuzzer written in Go with intelligent filtering and progress tracking.<br/>"
 collection: portfolio
 ---
 
